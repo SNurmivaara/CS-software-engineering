@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.stream.IntStream;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import org.apache.http.client.fluent.Request;
 
 public class Main {
@@ -27,6 +29,27 @@ public class Main {
         String courseText = Request.Get(url).execute().returnContent().asString();
         Course[] courses = mapper.fromJson(courseText, Course[].class);
 
+        // fetch ohtu-course data
+        url = "https://studies.cs.helsinki.fi/courses/ohtu2018/stats";
+        String ohtuText = Request.Get(url).execute().returnContent().asString();
+        JsonParser parser = new JsonParser();
+        JsonObject ohtuParsed = parser.parse(ohtuText).getAsJsonObject();
+
+        //fetch rails-course data
+        url = "https://studies.cs.helsinki.fi/courses/rails2018/stats";
+        String railsText = Request.Get(url).execute().returnContent().asString();
+        JsonObject railsParsed = parser.parse(railsText).getAsJsonObject();
+
+        int ohtuHours = 0;
+        int ohtuStudents = 0;
+        int ohtuExercises = 0;
+        for (int i = 1; i <= ohtuParsed.size(); i++) {
+            JsonObject ohtu = ohtuParsed.getAsJsonObject(Integer.toString(i));
+            ohtuHours += ohtu.get("hour_total").getAsInt();
+            ohtuStudents += ohtu.get("students").getAsInt();
+            ohtuExercises += ohtu.get("exercise_total").getAsInt();
+        }
+
         System.out.println("Student number " + studentNr);
 
         int totalHours = 0;
@@ -44,6 +67,10 @@ public class Main {
             System.out.println("\n  Total of " + totalAssingments + "/" + IntStream.of(course.getExercises()).sum() + " assignments done in " + totalHours + " hours.");
             totalAssingments = 0;
             totalHours = 0;
+
+            if(Objects.equals(course.getName(), "ohtu2018")) {
+                System.out.println("\n  Total of " + ohtuStudents + " students on course with " + ohtuExercises + " exercises done in " + ohtuHours + " hours.");
+            }
         }
 
     }
