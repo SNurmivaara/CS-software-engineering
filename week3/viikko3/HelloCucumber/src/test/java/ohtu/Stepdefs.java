@@ -1,5 +1,7 @@
 package ohtu;
 
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -27,5 +29,9 @@ public class Stepdefs {
     public void the_value_should_be(int val) throws Throwable {
         assertEquals(val, counter.value());
     }
-  
+
+    @And("^it is reseted$")
+    public void itIsReseted() throws Throwable {
+        counter.reset();
+    }
 }
