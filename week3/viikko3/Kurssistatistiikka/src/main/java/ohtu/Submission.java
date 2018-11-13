@@ -29,6 +29,10 @@ public class Submission {
         return exercises;
     }
 
+    public String listExercises() {
+        return Arrays.toString(exercises).replaceAll("[\\[|\\]]", "");
+    }
+
     public int getNumberOfExercises() {
         return exercises.length;
     }
@@ -43,12 +47,6 @@ public class Submission {
 
     public void setCourse(String course) {
         this.course = course;
-    }
-
-    @Override
-    public String toString() {
-        return course + ", week " + week + " completed " + exercises.length + " exercises spending a total of " + hours + " hours. Completed assingments: "
-        + Arrays.toString(exercises).replaceAll("[\\[\\]]", "");
     }
 
 }
