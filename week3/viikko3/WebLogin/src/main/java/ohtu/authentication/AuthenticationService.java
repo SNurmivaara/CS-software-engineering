@@ -4,6 +4,8 @@ import ohtu.data_access.UserDao;
 import ohtu.domain.User;
 import ohtu.util.CreationStatus;
 
+import java.util.Objects;
+
 public class AuthenticationService {
 
     private UserDao userDao;
@@ -32,6 +34,22 @@ public class AuthenticationService {
 
         if (username.length()<3 ) {
             status.addError("username should have at least 3 characters");
+        }
+
+        if (!username.matches("^[a-zA-Z]+$")){
+            status.addError("username should have only letters in it");
+        }
+
+        if (password.length() < 8) {
+            status.addError("password should have at least 8 characters");
+        }
+
+        if (password.matches("^[a-zA-Z]+$")) {
+            status.addError("Password should include at least 1 numerical or special character");
+        }
+
+        if (!Objects.equals(password, passwordConfirmation)) {
+            status.addError("password and password confirmation do not match");
         }
 
         if (status.isOk()) {

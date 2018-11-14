@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import java.util.Random;
 
@@ -12,9 +13,10 @@ public class Tester {
     public static void main(String[] args) {
         Random r = new Random();
 
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        //WebDriver driver = new ChromeDriver();
 
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new HtmlUnitDriver();
 
         driver.get("http://localhost:4567");
 
