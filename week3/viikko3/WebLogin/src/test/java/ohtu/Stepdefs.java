@@ -1,5 +1,6 @@
 package ohtu;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -76,5 +77,10 @@ public class Stepdefs {
         element.sendKeys(password);
         element = driver.findElement(By.name("login"));
         element.submit();  
-    } 
+    }
+
+    @When("^nonexistent username \"([^\"]*)\" and password \"([^\"]*)\" are given$")
+    public void nonexistentUsernameAndPasswordAreGiven(String username, String password) throws Throwable {
+        logInWith(username, password);
+    }
 }
