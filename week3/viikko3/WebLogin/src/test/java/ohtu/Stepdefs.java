@@ -11,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.Random;
+
 public class Stepdefs {
     WebDriver driver = new ChromeDriver();
     String baseUrl = "http://localhost:4567";
@@ -144,4 +146,35 @@ public class Stepdefs {
         element.submit();
     }
 
+    @Given("^user with username \"([^\"]*)\" with password \"([^\"]*)\" is successfully created and logged out of$")
+    public void userWithUsernameWithPasswordIsSuccessfullyCreatedAndLoggedOutOf(String username, String password) throws Throwable {
+        commandNewUserIsSelected();
+        registerWith(username, password);
+        aNewUserIsCreated();
+        WebElement element = driver.findElement(By.linkText("continue to application mainpage"));
+        element.click();
+        element = driver.findElement(By.linkText("logout"));
+        element.click();
+    }
+
+    @Given("^user with username \"([^\"]*)\" and password \"([^\"]*)\" is tried to be created$")
+    public void userWithUsernameAndPasswordIsTriedToBeCreated(String username, String password) throws Throwable {
+        commandNewUserIsSelected();
+        pageHasContent("Create username and give password");
+        WebElement element = driver.findElement(By.name("username"));
+        element.sendKeys(username);
+        element = driver.findElement(By.name("password"));
+        element.sendKeys(password);
+        element = driver.findElement(By.name("passwordConfirmation"));
+        element.sendKeys(password);
+        element = driver.findElement(By.name("signup"));
+        element.click();
+        pageHasContent("username should have at least 3 characters");
+        backToHome();
+    }
+
+    private void backToHome() throws Throwable {
+        WebElement element = driver.findElement(By.linkText("back to home"));
+        element.click();
+    }
 }
