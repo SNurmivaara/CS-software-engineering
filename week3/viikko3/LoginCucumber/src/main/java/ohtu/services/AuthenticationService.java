@@ -38,9 +38,12 @@ public class AuthenticationService {
         return true;
     }
 
+    // Username has to be a minimum of 3 characters and only contain a-z
+    // Password has to be atleast 8 characters and contains atleast 1 number or special character
     private boolean invalid(String username, String password) {
-        // validity check of username and password
-
-        return false;
+        if (username.length() >= 3 && username.matches("[a-zA-Z]+") && password.length() >= 8 && !password.matches("[a-zA-Z]+")) {
+            return false;
+        }
+        return true;
     }
 }
