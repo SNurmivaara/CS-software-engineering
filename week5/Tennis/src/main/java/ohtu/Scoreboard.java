@@ -13,6 +13,7 @@ import java.rmi.UnexpectedException;
 public class Scoreboard {
     private Player player1;
     private Player player2;
+    private String[] tennisTerms = {"Love", "Fifteen", "Thirty", "Forty"};
 
     public Scoreboard(String player1, String player2) {
         this.player1 = new Player(player1);
@@ -59,17 +60,6 @@ public class Scoreboard {
     }
 
     public String getTennisTerm(int score) {
-        switch(score) {
-            case 0:
-                return "Love";
-            case 1:
-                return "Fifteen";
-            case 2:
-                return "Thirty";
-            case 3:
-                return "Forty";
-            default:
-                return "Illegal score!";
-        }
+        return this.tennisTerms[score];
     }
 }
