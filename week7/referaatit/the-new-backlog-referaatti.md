@@ -39,6 +39,6 @@ Tämän jälkeen jaotellaan tarinat kokojärjestyksessä ylhäältä alas. Teht�
 
 ### Sovelluksen rakenne
 
-Jokaisella sovelluksella on rakenne, jota voi visualisoida eräänlaisena luurangon selkärankana ja kylkiluina. Tarkoituksena on, että tarinakartan toiseksiylimmät tarinat ovat sellaisia, jotka toteuttamalla saadaan prototyyppi - MVP - aikaan.
+Jokaisella sovelluksella on rakenne, jota voi visualisoida eräänlaisena luurangon selkärankana ja kylkiluina. Tarkoituksena on, että tarinakartan toiseksiylimmät tarinat ovat sellaisia, jotka toteuttamalla saadaan prototyyppi - MVP - aikaan. Selkärankana toimii sovelluksen suurimmat tehtävät, joista sitten lähtee kylkiluita joihin jaotellaan tehtävän toteuttamisen vaativat pienemmät tarinat tärkeysjärjestyksessä. Tämä mahdollistaa projektin kokonaiskuvan ymmärtämisen vilkaisulla - jos joku haluaa tietää ohjelman perustoiminnan riittää kulkea ylin rivi läpi ja tarkennuksia pyydettäessä voi sitten tarvittaessa edetä listaa alaspäin.
 
 ![Walking skeleton map](http://www.jpattonassociates.com/wp-content/uploads/2008/10/backbone_and_skeleton.png)
