@@ -15,7 +15,6 @@ Kirjassa käytetään hyvin lainauksia, vertauskuvia ja visualisointia apuna kok
 Teos on virkistävän pohtiva ja filosofinen, välttäen yleiset "Tee näin niin liiketoimintasi menestyy"-kikat. Sanoma on enemmänkin valistava ja vaihtoehtoja tarjoava, joka jättää sopivan määrän pohtimista ja pääteltävää lukijalle. Teos vaihtelee esittelemisen, yleisten harhakäsitysten korjauksen ja itsekriittisen pohdinnan välillä sujuvasti, kuitenkin toisinaan hieman kompastuen lyhenne ja lainasanaviidakkoonsa.
 
 ## Referaatti
-***
 
 ### Lean
 
