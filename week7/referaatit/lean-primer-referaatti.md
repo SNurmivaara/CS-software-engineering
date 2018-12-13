@@ -17,6 +17,8 @@ Teos on virkistävän pohtiva ja filosofinen, välttäen yleiset "Tee näin niin
 ## Referaatti
 ***
 
+### Lean
+
 Tiivistettynä Lean Primer:in tarkoituksena on selvittää lukijalle Lean-ajattelumallin (jatkossa pelkästään Lean) periaatteita, korjata yleisiä virhekäsityksiä ja kannustaa omaan ajattelemiseen ja tulkintaan aiheesta.
 
 Lean on Toyotan luoman Toyota Wayn pohjalta muotoiltu prosessinhallinta ja kehitysmalli. Leanin perusperiaatteita on kaksi: jatkuva kehittyminen ja ihmisten kunnioittaminen. Teoksessa keskitytään paljon muistuttamaan että erilaiset hallinnon työkalut _eivät_ ole osa Leania.
@@ -65,7 +67,9 @@ Leanin perusperiaatteet ovat syntyneet ja jalostuneet erityisesti tuotteiden val
 
 Tätä varten on vielä yksinkertainen aate: _"Outlearn the competition"_. Tämä voidaan jakaa yksinkertaistettuna siihen, että luodaan enemmän hyödyllistä tietoa ja opitaan paremmin kuin kilpailijat. Tämä voidaan vielä jalostaa talousmielessä helpommin ymmärrettäväksi luodun tiedon arvon lisäämiseksi ja tiedon tuottamisen hinnan laskemiseksi. Tätä varten on jälleen useita periaatteita, kuten työn rytmitys, tiedon uudelleenkäyttö, samanaikainen tuotekehitys yms.
 
-Loppupäätelmänä voidaan huomata, että Lean on yksinkertaisen "tee näin"-mallin sijasta moniosainen systeemi, joka koskettaa koko yrityksen toimintaa ja osa-alueita, kuten: tuotekehitystä, myyntiä, tuotantoa, palveluita ja henkilöstöpalveluita.
+### Loppupäätelmä
+
+Voidaan huomata, että Lean on yksinkertaisen "tee näin"-mallin sijasta moniosainen systeemi, joka koskettaa koko yrityksen toimintaa ja osa-alueita, kuten: tuotekehitystä, myyntiä, tuotantoa, palveluita ja henkilöstöpalveluita.
 
 > Lean applies to the enterprise.
 
